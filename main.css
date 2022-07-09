@@ -1,0 +1,125 @@
+@font-face {
+    font-family: dejavusans;
+    src: url('technolamy/fonts/DejaVuSansCondensed-Bold.ttf');
+}
+
+@font-face {
+    font-family: chathura;
+    src: url("technolamy/fonts/Chathura Bold.ttf");
+    font-weight: lighter;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    background-color: grey;
+    margin-top: 50px;
+}
+
+.frame{
+    height: 500px;
+    width:500px;
+    background-color: black;
+    font-size: 20px;
+    max-width: 500px;
+}
+
+ .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    height: 20px;
+    width: inherit;
+    color: white;
+    font-family: dejavusans;
+    border: 1px solid red;
+    font-size: 20px;
+}
+
+.price{
+    color: red
+}
+
+
+.photo-place{
+    height: 130px;
+    width: 100%;
+    border: 1px solid blue;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-y: hidden;
+} 
+
+.image-box{
+    margin-top: 0px;
+    width: 40%;
+    height: inherit;
+    display: flex;
+    background-color: red;
+    justify-content: center;
+}
+
+.table > * {
+    height: inherit;
+    width: 45%;
+    border: 1px solid grey;
+    color: white;
+    font-family: chathura;
+    font-size: 33px;
+    line-height: 35px;
+}
+
+ul{
+    list-style: none;
+}
+
+.pros > ul {
+    background-color: red;
+    margin-top: 0px;
+    overflow-x: visible;
+}
+.cons > ul {
+    background-color: red;
+    margin-top: 0;
+}
+
+.pros li{
+    white-space: nowrap;
+    margin-left:-30px;
+    overflow-x: visible;
+}
+
+.cons li{
+    white-space: nowrap;
+    float: right;
+    margin-right: 10px;
+}
+
+.recommended{
+    background-color: yellow;
+    height: 25px;
+    font-family: dejavusans;
+    color: red;
+    text-align: center;
+
+}
+.verdict{
+    border: 1px solid red;
+    height: 45px;
+    width: 100%;
+    color: white;
+    font-family: chathura;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
