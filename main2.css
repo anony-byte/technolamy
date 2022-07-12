@@ -1,11 +1,11 @@
-@font-face {
+    @font-face {
     font-family: dejavusans;
-    src: url('fonts/DejaVuSansCondensed-Bold.ttf');
+    src: url('DejaVuSansCondensed-Bold.ttf');
 }
 
 @font-face {
     font-family: chathura;
-    src: url("fonts/Chathura Bold.ttf");
+    src: url("Chathura Bold.ttf");
     font-weight: lighter;
 }
 
@@ -82,16 +82,17 @@ ul{
     border-left: 2px solid white;
     margin-left: 10px;
 }
-.cons > ul {
-    margin-top: 0;
-    margin-right: 10px;
-    border-left: 2px solid white;
-}
 
 .pros li{
     white-space: nowrap;
     margin-left:-30px;
     overflow-x: visible;
+}
+
+.cons > ul {
+    margin-top: 0;
+    margin-right: 10px;
+    border-left: 2px solid white;
 }
 
 .cons li{
@@ -100,6 +101,7 @@ ul{
     border-right :2px solid white;
     margin-right: 0px;
     padding-right: 10px ;
+    border: 2px solid white;
 }
 
 .recommended{

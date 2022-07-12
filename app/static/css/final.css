@@ -1,11 +1,11 @@
-@font-face {
+    @font-face {
     font-family: dejavusans;
-    src: url('technolamy/fonts/DejaVuSansCondensed-Bold.ttf');
+    src: "{{url_for('static', filename='Chathura Bold.ttf')}}";
 }
 
 @font-face {
     font-family: chathura;
-    src: url("technolamy/fonts/Chathura Bold.ttf");
+    src: url("fonts/Chathura Bold.ttf");
     font-weight: lighter;
 }
 
@@ -25,6 +25,7 @@ body{
 }
 
  .header {
+    margin-top: 10px;;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +34,6 @@ body{
     width: inherit;
     color: white;
     font-family: dejavusans;
-    border: 1px solid red;
     font-size: 20px;
 }
 
@@ -45,38 +45,31 @@ body{
 .photo-place{
     height: 130px;
     width: 100%;
-    border: 1px solid blue;
     align-items: center;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .table{
-    height: 250px;
+    margin-top: 10px;
+    height: 265px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     overflow-y: hidden;
-} 
-
-.image-box{
-    margin-top: 0px;
-    width: 40%;
-    height: inherit;
-    display: flex;
-    background-color: red;
-    justify-content: center;
 }
 
 .table > * {
     height: inherit;
     width: 45%;
-    border: 1px solid grey;
     color: white;
     font-family: chathura;
     font-size: 33px;
-    line-height: 35px;
+    line-height: 40px;
 }
 
 ul{
@@ -84,13 +77,16 @@ ul{
 }
 
 .pros > ul {
-    background-color: red;
     margin-top: 0px;
     overflow-x: visible;
+    border-left: 2px solid white;
+    margin-left: 10px;
 }
 .cons > ul {
-    background-color: red;
     margin-top: 0;
+    margin-right: 10px;
+    border-left: 2px solid white;
+    display: block;
 }
 
 .pros li{
@@ -102,19 +98,20 @@ ul{
 .cons li{
     white-space: nowrap;
     float: right;
-    margin-right: 10px;
+    border-right :2px solid white;
+    margin-right: 0px;
+    padding-right: 10px ;
 }
 
 .recommended{
-    background-color: yellow;
     height: 25px;
     font-family: dejavusans;
     color: red;
     text-align: center;
+    margin-top: -10px;
 
 }
 .verdict{
-    border: 1px solid red;
     height: 45px;
     width: 100%;
     color: white;
@@ -122,4 +119,26 @@ ul{
     font-size: 30px;
     line-height: 30px;
     text-align: center;
+}
+
+.image-box{
+    margin-top: 0px;
+    width: 73%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.pros-title{
+    font-family: dejavusans;
+    color: red;
+    margin-top: 100px;
+    font-size: 17px;
+}
+
+.cons-title {
+    font-family: dejavusans;
+    color: red;
+    margin-top: 100px;
+    font-size: 17px;
 }

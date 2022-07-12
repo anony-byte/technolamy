@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Form</title>
+		<link rel = "stylesheet" href = "form.css"/>
+    </head>
+    <body>
+        <form action="{{url_for('form')}}", method="post">
+            <label for = "phone_name">Phone Name</label>
+            <input type = "text" id="phone_name" name="phone_name" required="true"/>
+            <br/>
+            <label for = "price">Price</label>
+            <input type = "text" id="price" name="price" required="true"/>
+            <br/>
+           <label for = "pros">pros</label>
+           <textarea rows="6" cols="16" name="pros" id="pros" required="true"></textarea>
+           <br/>
+           <label for = "cons">cons</label>
+           <textarea rows="6" cols="16" name="cons" id="cons" required="true"></textarea>
+           <br/>
+           <label for = "recommended">recommended</label>
+           <input type = "text" id="recommended" name="recommended" required="true"/>
+           <br/>
+           <label for = "verdict">verdict</label>
+           <input type = "text" id="verdict" name="verdict" required="true"/>            <br/>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
