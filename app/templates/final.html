@@ -48,6 +48,10 @@
 			</div>
 			<div class="recommended">{{details['recommended']}}</div>
 			<div class="verdict">{{details['verdict']}}</div>
+			<form class = "hashtag" action = "{{url_for('home')}}" method = "post">
+				<textarea rows="4" cols="50" name = "hashtags">{{hashtags}}</textarea>
+				<button type="submit">Finalize</button>
+			</form>
 		</div>
 	</body>
 </html>

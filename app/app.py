@@ -1,7 +1,13 @@
-from flask import Flask, render_template, request, url_for, redirect, session
+from flask import Flask, render_template, request, url_for, redirect
+import sys
+sys.path.append('/Users/bhargavd/Desktop/project/technolamy/hashtag_maker')
+sys.path.append('/Users/bhargavd/Desktop/project/technolamy')
+sys.path.append('/Users/bhargavd/Desktop/project/technolamy/image_filter')
+
+from hashtag_maker import hashtag
+
 
 app = Flask(__name__, template_folder='templates')
-app.secret_key = "technolamy"
 
 details = {'phone_name': 'MOTO G42',
            'price': '12999INR',
@@ -33,10 +39,20 @@ def form():
     return render_template('form.html')
 
 
-@app.route('/output')
+@app.route('/home', methods=["GET", "POST"])
 def home():
-    return render_template('final.html', details=details)
+    if request.method == "POST":
+        all_hashtags = hashtag.HashTagMaking.str_to_list(request.form.get("hashtags"))
+        print(all_hashtags)
+        return redirect(url_for('done'))
+    hashtags = hashtag.HashTagMaking(details).all_hashtags()
+    return render_template('final.html', details=details, hashtags=hashtags)
+
+
+@app.route('/done')
+def done():
+    return 'Thankyou! your form has been submitted'
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
